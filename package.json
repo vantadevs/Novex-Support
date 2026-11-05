@@ -1,0 +1,19 @@
+{
+  "name": "novex-support-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Novex Market Discord ticket support bot",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "register": "node src/deploy-commands.js",
+    "check": "node --check src/index.js && node --check src/commands.js && node --check src/tickets.js && node --check src/store.js && node --check src/deploy-commands.js"
+  },
+  "engines": { "node": ">=20.11.0" },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.3"
+  }
+}
