@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: novex-support
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.1
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: CLIENT_ID
+        sync: false
+      - key: GUILD_ID
+        value: 694270550524035112
+      - key: PORT
+        value: 10000
